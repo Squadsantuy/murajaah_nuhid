@@ -1,0 +1,39 @@
+{
+    "redirects": [
+        {
+            "source": "/study",
+            "destination": "/surat",
+            "permanent": true
+        },
+        {
+            "source": "/study/:path*",
+            "destination": "/surat/:path*",
+            "permanent": true
+        },
+        {
+            "source": "/quiz",
+            "destination": "/murajaah",
+            "permanent": true
+        },
+        {
+            "source": "/quiz/:path*",
+            "destination": "/murajaah/:path*",
+            "permanent": true
+        },
+        {
+            "source": "/bookmarks",
+            "destination": "/bacaan-terakhir",
+            "permanent": true
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/api-sholat/:path*",
+            "destination": "https://use.api.co.id/:path*"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Redirect old paths
+  RewriteRule ^study/?(.*)$ /surat/$1 [L,R=301]
+  RewriteRule ^quiz/?(.*)$ /murajaah/$1 [L,R=301]
+  RewriteRule ^bookmarks/?(.*)$ /bacaan-terakhir [L,R=301]
+
+  # Handle SPA Routing
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
