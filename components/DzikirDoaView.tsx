@@ -53,6 +53,13 @@ export const DzikirDoaView: React.FC = () => {
             path: '/doa',
             icon: <HandsIcon className="w-9 h-9 text-teal-600" />,
             iconBg: 'bg-teal-100',
+        },
+        {
+            title: 'Tahlil',
+            subtitle: 'Tahlil Dan Doa',
+            path: '/tahlil',
+            icon: <HandsIcon className="w-9 h-9 text-teal-600" />,
+            iconBg: 'bg-teal-300',
         }
     ];
 
