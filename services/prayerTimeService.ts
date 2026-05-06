@@ -25,7 +25,7 @@ const headers = {
 
 export const fetchRegencies = async (): Promise<Regency[]> => {
     try {
-        const url = `${BASE_URL}/regional/indonesia/prayer-times/regencies?page=1&limit=100`;
+        const url = `${BASE_URL}/regional/indonesia/prayer-times/regencies?page=1&limit=500`;
         console.log('Fetching regencies from:', url);
         const response = await fetch(url, { headers });
         console.log('Regencies response status:', response.status);
