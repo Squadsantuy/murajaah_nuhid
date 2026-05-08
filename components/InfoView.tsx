@@ -32,13 +32,13 @@ export const InfoView: React.FC = () => {
 
                     <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
                         <p>
-                            Aplikasi ini dibuat untuk membantu pembuat aplikasi dalam murajaah (mengulang) hafalan Al-Quran.
+                            Aplikasi ini dibuat untuk membantu dalam murajaah (mengulang) hafalan Al-Quran.
                             Dengan latihan-latihan interaktif, pengguna dapat menguji dan memperkuat ingatan tentang surat-surat
                             Al-Quran beserta informasinya.
                         </p>
                         <p>
-                            Jika Anda merasa aplikasi ini bermanfaat dan ingin menggunakannya untuk keperluan murajaah Anda juga,
-                            silakan gunakan dengan senang hati. Semoga bermanfaat untuk semua yang ingin menjaga hafalan Al-Quran.
+                            Jika Anda merasa aplikasi ini bermanfaat dan ingin menggunakannya untuk keperluan murajaah,
+                            silakan gunakan dengan senang hati dan bagikan kepada lainnya. Semoga bermanfaat untuk semua yang ingin menjaga hafalan Al-Quran.
                         </p>
                     </div>
                 </div>
@@ -136,7 +136,7 @@ export const InfoView: React.FC = () => {
 
                 {/* Developer Card */}
                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 mb-4">
-                    <h3 className="font-semibold text-slate-800 mb-4">Pengembang</h3>
+                    <h3 className="font-semibold text-slate-800 mb-4">Admin App</h3>
                     <div className="flex items-center gap-4">
                         <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-slate-500">
@@ -144,7 +144,7 @@ export const InfoView: React.FC = () => {
                             </svg>
                         </div>
                         <div>
-                            <h4 className="font-medium text-slate-800">Abu Asfa</h4>
+                            <h4 className="font-medium text-slate-800">Tito Zumarsono</h4>
                             <p className="text-xs text-slate-500">Semoga Allah memudahkan kita dalam menjaga hafalan Al-Quran</p>
                         </div>
                     </div>
