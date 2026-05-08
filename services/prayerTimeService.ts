@@ -25,7 +25,7 @@ const headers = {
 
 export const fetchRegencies = async (): Promise<Regency[]> => {
     try {
-        const url = `${BASE_URL}/regional/indonesia/prayer-times/regencies?page=1&limit=500`;
+        const url = `${BASE_URL}/regional/indonesia/prayer-times/regencies?page=1&limit=200`;
         console.log('Fetching regencies from:', url);
         const response = await fetch(url, { headers });
         console.log('Regencies response status:', response.status);
@@ -60,7 +60,7 @@ export const searchRegencies = async (query: string): Promise<Regency[]> => {
         // The API might not have a direct search endpoint, so we might need to filter client-side 
         // OR use query params if supported. The docs mention filtering by regency_code.
         // For now, let's fetch first page or common cities.
-        const response = await fetch(`${BASE_URL}/regional/indonesia/prayer-times/regencies?page=1&limit=150`, { headers });
+        const response = await fetch(`${BASE_URL}/regional/indonesia/prayer-times/regencies?page=1&limit=200`, { headers });
         const data = await response.json();
 
         if (data.is_success && data.data) {
