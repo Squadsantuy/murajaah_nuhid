@@ -16,7 +16,7 @@ export interface PrayerSchedule {
 }
 
 const API_KEY = '9yXJNYmQagtGd2OmTzo1KP2e4p98Hzz57BzYO223UckjedFDov';
-const BASE_URL = 'api/sholat';
+const BASE_URL = '/api-sholat';
 
 const headers = {
     'x-api-co-id': API_KEY,
