@@ -54,29 +54,44 @@ export const fetchRegencies = async (): Promise<Regency[]> => {
     }
 };
 
-export const searchRegencies = async (query: string): Promise<Regency[]> => {
-    if (!query) return [];
-    try {
-        // The API might not have a direct search endpoint, so we might need to filter client-side 
-        // OR use query params if supported. The docs mention filtering by regency_code.
-        // For now, let's fetch first page or common cities.
-        const response = await fetch(`${BASE_URL}/regional/indonesia/prayer-times/regencies?page=1&limit=200`, { headers });
-        const data = await response.json();
+export const fetchAllRegencies = async (): Promise<Regency[]> => {
+    let allRegencies: Regency[] = [];
+    let currentPage = 1;
+    let hasMoreData = true;
+    const limit = 100; // Sesuaikan dengan limit maksimal API
 
-        if (data.is_success && data.data) {
-            return data.data
-                .map((item: any) => ({
+    try {
+        while (hasMoreData) {
+            const url = `${BASE_URL}/regional/indonesia/prayer-times/regencies?page=${currentPage}&limit=${limit}`;
+            const response = await fetch(url, { headers });
+            const data = await response.json();
+
+            if (data.is_success && data.data && data.data.length > 0) {
+                const mappedData = data.data.map((item: any) => ({
                     code: item.code,
                     name: item.name
-                }))
-                .filter((r: Regency) => r.name.toLowerCase().includes(query.toLowerCase()));
+                }));
+                
+                allRegencies = [...allRegencies, ...mappedData];
+                
+                // Cek apakah jumlah data yang diterima kurang dari limit
+                // Jika kurang, berarti ini adalah halaman terakhir
+                if (data.data.length < limit) {
+                    hasMoreData = false;
+                } else {
+                    currentPage++;
+                }
+            } else {
+                hasMoreData = false;
+            }
         }
-        return [];
+        return allRegencies;
     } catch (error) {
-        console.error('Error searching regencies:', error);
-        return [];
+        console.error('Error fetching all regencies:', error);
+        return allRegencies;
     }
 };
+
 
 export const fetchDailyPrayerTime = async (regencyCode: string, date: string): Promise<PrayerSchedule | null> => {
     try {
