@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muroqu.web.id/sitemap.xml
