@@ -17,11 +17,12 @@ export const ArticleListView: React.FC = () => {
             <div className="flex-1 overflow-y-auto px-6 py-6 pb-24">
                 <div className="space-y-4">
                     {artikelData.map((artikel, index) => (
-                        <div
-                            key={index}
-                            onClick={() => navigate(artikel.link)}
-                            className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex items-center justify-between group cursor-pointer hover:border-primary-200 hover:shadow-md transition-all active:scale-[0.98]"
-                        >
+      <div
+    key={index}
+    onClick={() => window.location.href = artikel.link} // Berpindah ke file .html
+    className="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex items-center justify-between group cursor-pointer hover:border-primary-200 transition-all active:scale-[0.98]"
+>
+
                             <div className="flex items-center gap-4">
                                 {/* Icon Box - Serupa dengan desain Features Card */}
                                 <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 group-hover:bg-primary-600 group-hover:text-white transition-all duration-300">
