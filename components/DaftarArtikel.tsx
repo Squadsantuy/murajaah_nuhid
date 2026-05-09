@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import artikelData from '../data/artikel.json'; // Sesuaikan path file json kamu
+import artikelData from './artikel.json'; // Sesuaikan path file json kamu
 
 export const ArticleListView: React.FC = () => {
     const navigate = useNavigate();
