@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebijakan Privasi - MurajaahQu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+    <div class="max-w-md mx-auto min-h-screen flex flex-col shadow-xl bg-white">
+        <!-- Header -->
+        <div class="flex-none bg-gradient-to-r from-primary-600 to-primary-500 px-6 py-6 shadow-sm">
+            <div class="flex items-center gap-4">
+                <a href="https://muroqu.web.id/" class="text-white/80 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </a>
+                <div>
+                    <h1 class="text-xl font-bold text-white leading-none">Kebijakan Privasi</h1>
+                    <p class="text-white/70 text-xs mt-1">Terakhir diperbarui: 20 Mei 2024</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="flex-1 px-6 py-8 pb-20 overflow-y-auto">
+            <div class="prose prose-slate max-w-none">
+                
+                <section class="mb-8">
+                    <h2 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-primary-500 rounded-full"></span>
+                        1. Informasi Umum
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Selamat datang di MurajaahQu. Kami sangat menghargai privasi Anda. Kebijakan ini menjelaskan bagaimana kami mengelola informasi di dalam aplikasi ini.
+                    </p>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-primary-500 rounded-full"></span>
+                        2. Penyimpanan Data
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Aplikasi MurajaahQu dirancang untuk bekerja secara lokal. Data hafalan, progres murajaah, dan pengaturan pribadi Anda disimpan langsung di memori perangkat Anda (Local Storage), bukan di server kami.
+                    </p>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-primary-500 rounded-full"></span>
+                        3. Layanan Pihak Ketiga
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                        Kami menggunakan API dari <strong>EQuran.id</strong> untuk menyediakan konten ayat Al-Quran. Saat Anda mengakses ayat, perangkat Anda akan terhubung ke server mereka.
+                    </p>
+                    <div class="bg-slate-50 border border-slate-100 p-3 rounded-xl text-xs text-slate-500 italic">
+                        Catatan: Kami tidak bertanggung jawab atas kebijakan privasi layanan pihak ketiga tersebut.
+                    </div>
+                </section>
+
+                <section class="mb-8">
+                    <h2 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+                        <span class="w-1.5 h-6 bg-primary-500 rounded-full"></span>
+                        4. Keamanan
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Karena data disimpan di perangkat Anda, keamanan data sepenuhnya bergantung pada keamanan perangkat yang Anda gunakan.
+                    </p>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="flex-none p-6 text-center border-t border-slate-100 bg-slate-50">
+            <p class="text-[10px] uppercase tracking-tighter text-slate-400 font-bold italic">
+                بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+            </p>
+            <p class="text-[10px] text-slate-400 mt-1 uppercase tracking-widest">
+                &copy; 2024 MurajaahQu Team
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
