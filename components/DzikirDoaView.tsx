@@ -55,9 +55,9 @@ export const DzikirDoaView: React.FC = () => {
             iconBg: 'bg-teal-100',
         },
         {
-            title: 'Tahlil',
-            subtitle: 'Tahlil Dan Doa',
-            path: '/tahlil',
+            title: 'Daftar Artikel',
+            subtitle: 'Kumpulan Artikel Islami',
+            path: '/componen/DaftarArtikel.tsx',
             icon: <HandsIcon className="w-9 h-9 text-teal-600" />,
             iconBg: 'bg-teal-300',
         }
