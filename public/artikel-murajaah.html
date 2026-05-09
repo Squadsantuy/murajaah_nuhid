@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Artikel - MurajaahQu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        },
+                        accent: {
+                            500: '#f43f5e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .article-content h2 { color: #1e293b; font-weight: 700; font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+        .article-content h2::before { content: ''; width: 4px; height: 20px; background: #0ea5e9; border-radius: 99px; display: inline-block; }
+        .article-content p { color: #475569; line-height: 1.7; font-size: 0.9375rem; margin-bottom: 1rem; }
+        .article-content blockquote { border-left: 4px solid #e2e8f0; padding-left: 1rem; font-style: italic; color: #64748b; margin: 1.5rem 0; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+    <div class="max-w-md mx-auto min-h-screen flex flex-col shadow-2xl bg-white relative">
+        
+        <!-- Sticky Header -->
+        <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-slate-100 px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-primary-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </a>
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Artikel Edukasi</span>
+            </div>
+            <button class="text-slate-400 hover:text-accent-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0-10.628a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5zm0 10.628a2.25 2.25 0 100 4.5 2.25 2.25 0 000 4.5z" />
+                </svg>
+            </button>
+        </header>
+
+        <!-- Article Content Area -->
+        <main class="flex-1 overflow-y-auto custom-scrollbar">
+            
+            <!-- Hero Image / Header Artikel -->
+            <div class="px-6 pt-8 pb-6">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-primary-50 text-primary-600 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider">Tips Murajaah</span>
+                    <span class="text-slate-400 text-[10px]">• 5 Menit Baca</span>
+                </div>
+                <h1 class="text-2xl font-extrabold text-slate-800 leading-tight mb-4">
+                    Judul Artikel Utama Anda Letakkan di Sini
+                </h1>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-bold text-xs">M</div>
+                    <div>
+                        <p class="text-xs font-bold text-slate-700">Admin MurajaahQu</p>
+                        <p class="text-[10px] text-slate-400">Dipublikasikan pada 20 Mei 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Image Placeholder -->
+            <div class="px-6 mb-8">
+                <div class="aspect-video bg-slate-100 rounded-3xl flex items-center justify-center border-2 border-dashed border-slate-200 overflow-hidden">
+                    <!-- Ganti src dengan gambar artikel -->
+                    <!-- <img src="gambar.jpg" class="w-full h-full object-cover"> -->
+                    <div class="text-center p-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12 text-slate-300 mx-auto mb-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6.75a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6.75v11.25a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                        <p class="text-xs text-slate-400 italic">Area Gambar Utama (Rekomendasi: 1280x720px)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Text -->
+            <div class="px-6 pb-20 article-content">
+                
+                <p>
+                    Gunakan paragraf pertama untuk menarik perhatian pembaca. Tuliskan ringkasan singkat atau latar belakang mengapa topik artikel ini penting bagi para penghafal Al-Quran.
+                </p>
+
+                <h2>Sub-Judul Bagian Pertama</h2>
+                <p>
+                    Tuliskan konten detail Anda di sini. Anda bisa menjelaskan langkah-langkah, tips, atau informasi mendalam lainnya. Gunakan bahasa yang mudah dipahami dan santai namun tetap sopan.
+                </p>
+
+                <blockquote>
+                    "Sebaik-baik kalian adalah orang yang belajar Al-Qur'an dan mengajarkannya." (HR. Bukhari)
+                </blockquote>
+
+                <h2>Tips Menggunakan Template</h2>
+                <p>
+                    Anda cukup melakukan copy-paste bagian <strong>article-content</strong> untuk membuat artikel baru. Pastikan setiap gambar memiliki teks alternatif (alt text) untuk optimasi SEO di masa mendatang.
+                </p>
+
+                <div class="my-8 p-5 bg-primary-50 rounded-2xl border border-primary-100">
+                    <h4 class="font-bold text-primary-700 text-sm mb-2 uppercase tracking-wide">Kesimpulan</h4>
+                    <p class="text-primary-900/70 text-sm mb-0">
+                        Buatlah rangkuman singkat dari seluruh pembahasan artikel Anda di bagian kotak highlight ini.
+                    </p>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Fixed Footer / CTA -->
+        <footer class="p-6 bg-slate-50 border-t border-slate-100">
+            <div class="flex items-center justify-between gap-4">
+                <div class="flex -space-x-2">
+                    <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-200"></div>
+                    <div class="w-8 h-8 rounded-full border-2 border-white bg-slate-300"></div>
+                </div>
+                <p class="text-[10px] text-slate-400 font-medium">Bergabung dengan 1.000+ penghafal lainnya</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
