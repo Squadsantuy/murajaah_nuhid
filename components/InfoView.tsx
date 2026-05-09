@@ -129,7 +129,7 @@ export const InfoView: React.FC = () => {
                     <div className="space-y-3">
                         {/* Menu Kebijakan Privasi */}
                         <div 
-                            onClick={() => window.location.href = '/privasi.html'}
+                            onClick={() => window.location.href = 'https://muroqu.web.id/privacy-policy.html'}
                             className="flex items-center justify-between p-2 -mx-2 rounded-xl hover:bg-slate-50 active:bg-slate-100 cursor-pointer transition-colors group"
                         >
                             <div className="flex items-start gap-3">
@@ -150,7 +150,7 @@ export const InfoView: React.FC = () => {
 
                         {/* Menu Syarat & Ketentuan */}
                         <div 
-                            onClick={() => window.location.href = '/terms-conditions.html'}
+                            onClick={() => window.location.href = 'https://muroqu.web.id/terms-conditions.html'}
                             className="flex items-center justify-between p-2 -mx-2 rounded-xl hover:bg-slate-50 active:bg-slate-100 cursor-pointer transition-colors group"
                         >
                             <div className="flex items-start gap-3">
@@ -171,7 +171,7 @@ export const InfoView: React.FC = () => {
 
                         {/* Menu Disclaimer */}
                         <div 
-                            onClick={() => window.location.href = '/disclaimer.html'}
+                            onClick={() => window.location.href = 'https://muroqu.web.id/disclaimer.html'}
                             className="flex items-center justify-between p-2 -mx-2 rounded-xl hover:bg-slate-50 active:bg-slate-100 cursor-pointer transition-colors group"
                         >
                             <div className="flex items-start gap-3">
@@ -192,7 +192,7 @@ export const InfoView: React.FC = () => {
 
                         {/* Menu FAQ */}
                         <div 
-                            onClick={() => window.location.href = '/faq.html'}
+                            onClick={() => window.location.href = 'https://muroqu.web.id/faq-muroqu.html'}
                             className="flex items-center justify-between p-2 -mx-2 rounded-xl hover:bg-slate-50 active:bg-slate-100 cursor-pointer transition-colors group"
                         >
                             <div className="flex items-start gap-3">
@@ -231,7 +231,7 @@ export const InfoView: React.FC = () => {
 
                 {/* Credits Card */}
                 <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 mb-4 cursor-pointer hover:bg-slate-50 transition-colors"
-                     onClick={() => window.location.href = '/credits.html'}>
+                     onClick={() => window.location.href = 'https://muroqu.web.id/credits-contributors.html'}>
                     <h3 className="font-semibold text-slate-800 mb-4">Sumber Data & Kredit</h3>
                     <div className="space-y-3">
                         <div className="flex items-start gap-3">
@@ -252,6 +252,9 @@ export const InfoView: React.FC = () => {
                 <div className="mt-6 text-center pb-10">
                     <p className="text-xs text-slate-400 font-serif">
                         بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+                    </p>
+                     <p className="text-xs text-slate-400 mt-2">
+                        Dibuat dengan ❤️ untuk kebaikan bersama
                     </p>
                     <p className="text-xs text-slate-400 mt-2 font-medium uppercase tracking-widest">
                         MurajaahQu &bull; 2026
