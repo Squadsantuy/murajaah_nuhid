@@ -49,7 +49,7 @@ export const DzikirDoaView: React.FC = () => {
         },
         {
             title: 'Doa Harian',
-            subtitle: 'Kumpulan doa sahih harian',
+            subtitle: 'Kumpulan Doa sahih harian',
             path: '/doa',
             icon: <HandsIcon className="w-9 h-9 text-teal-600" />,
             iconBg: 'bg-teal-100',
