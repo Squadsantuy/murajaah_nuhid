@@ -14,6 +14,8 @@ import { DzikirDoaView } from './components/DzikirDoaView';
 import { PrayerTimeView } from './components/PrayerTimeView';
 import { BookmarkProvider } from './context/BookmarkContext';
 import { usePushNotifications } from './hooks/usePushNotifications';
+import { ArticleListView } from './components/DaftarArtikelView';
+
 
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 
@@ -78,6 +80,7 @@ function App() {
             <Route path="/dzikir/:type" element={<DzikirView />} />
             <Route path="/doa" element={<DoaView />} />
             <Route path="/doa/:id" element={<DoaView />} />
+            <Route path="/artikel" element={<ArticleListView />} />
             <Route path="/bacaan-terakhir" element={<BookmarksView />} />
             <Route path="/info" element={<InfoView />} />
 
