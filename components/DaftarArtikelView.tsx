@@ -1,17 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-// PERBAIKAN: Naik satu folder ke atas (..) karena artikel.json ada di luar folder components
 import artikelData from '../artikel.json'; 
 
-// Definisikan interface agar TypeScript tidak komplain 'any'
 interface Artikel {
     judul: string;
     link: string;
 }
 
 export const ArticleListView: React.FC = () => {
-    // Karena 'navigate' tidak dipakai di bawah, kita hapus atau komen agar tidak error
-    // const navigate = useNavigate(); 
 
     return (
         <div className="flex flex-col h-full bg-slate-50">
