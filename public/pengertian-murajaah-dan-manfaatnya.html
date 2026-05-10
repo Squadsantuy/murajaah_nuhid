@@ -204,19 +204,42 @@
       border: 1px solid var(--border);
       border-left: 4px solid var(--emerald);
       border-radius: 0.5rem;
-      padding: 1.25rem 1.5rem;
       margin-bottom: 2.5rem;
+      overflow: hidden;
     }
+    .toc-toggle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: none;
+      border: none;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      gap: 0.5rem;
+      text-align: left;
+    }
+    .toc-toggle:hover { background: var(--emerald-lt); }
     .toc-title {
       font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 0.75rem;
+    }
+    .toc-arrow {
+      font-size: 0.7rem;
+      color: var(--emerald);
+      font-weight: 700;
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+    .toc-body {
+      padding: 0 1.5rem 1.1rem;
+      border-top: 1px solid var(--border);
     }
     .toc ol {
-      padding-left: 1.25rem;
+      padding: 0.75rem 0 0 1.25rem;
       display: flex;
       flex-direction: column;
       gap: 0.35rem;
@@ -395,17 +418,40 @@
   <main class="container" id="main-content">
 
     <!-- TOC -->
-    <nav class="toc" aria-label="Daftar Isi">
-      <div class="toc-title">Daftar Isi</div>
-      <ol>
-        <li><a href="#pengertian">Pengertian Murojaah secara Bahasa dan Istilah</a></li>
-        <li><a href="#peran-dalam-tahfidz">Perannya dalam Dunia Tahfidz</a></li>
-        <li><a href="#dalil">Dalil: Peringatan Nabi ﷺ tentang Hafalan</a></li>
-        <li><a href="#perumpamaan-unta">Perumpamaan Unta dan Pelajarannya</a></li>
-        <li><a href="#kesimpulan">Murojaah adalah Perjalanan Seumur Hidup</a></li>
-        <li><a href="#faq">FAQ: Pertanyaan Umum</a></li>
-      </ol>
+    <nav class="toc" id="tocBox" aria-label="Daftar Isi">
+      <button class="toc-toggle" id="tocToggle" onclick="toggleTOC()" aria-expanded="true" aria-controls="tocList">
+        <span class="toc-title">☰ Daftar Isi</span>
+        <span class="toc-arrow" id="tocArrow">▼</span>
+      </button>
+      <div class="toc-body" id="tocList">
+        <ol>
+          <li><a href="#pengertian">Pengertian Murojaah secara Bahasa dan Istilah</a></li>
+          <li><a href="#peran-dalam-tahfidz">Perannya dalam Dunia Tahfidz</a></li>
+          <li><a href="#dalil">Dalil: Peringatan Nabi ﷺ tentang Hafalan</a></li>
+          <li><a href="#perumpamaan-unta">Perumpamaan Unta dan Pelajarannya</a></li>
+          <li><a href="#kesimpulan">Murojaah adalah Perjalanan Seumur Hidup</a></li>
+          <li><a href="#faq">FAQ: Pertanyaan Umum</a></li>
+        </ol>
+      </div>
     </nav>
+
+    <script>
+      function toggleTOC() {
+        var list   = document.getElementById('tocList');
+        var arrow  = document.getElementById('tocArrow');
+        var btn    = document.getElementById('tocToggle');
+        var isOpen = list.style.display !== 'none';
+        if (isOpen) {
+          list.style.display  = 'none';
+          arrow.style.transform = 'rotate(-90deg)';
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          list.style.display  = 'block';
+          arrow.style.transform = 'rotate(0deg)';
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      }
+    </script>
 
     <article class="prose" itemscope itemtype="https://schema.org/Article">
       <meta itemprop="headline" content="Apa Itu Murojaah? Kunci Hafalan yang Tak Boleh Ditinggalkan" />
@@ -572,7 +618,7 @@
   </main>
 
   <footer>
-    <p>© 2026 MUROQU · Artikel Islami dan Pendidikan Qur'an</p>
+    <p>© 2026 Nama Website · Artikel Islami dan Pendidikan Qur'an</p>
   </footer>
 
 </body>
