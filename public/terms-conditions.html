@@ -4,132 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms & Conditions - MurajaahQu</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        emerald: {
-                            50: '#ecfdf5',
-                            500: '#10b981',
-                            600: '#059669',
-                            700: '#047857',
-                        },
-                        rose: {
-                            50: '#fff1f2',
-                            400: '#fb7185',
-                            500: '#f43f5e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #10b981; border-radius: 10px; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            margin: 0; padding: 0; background-color: #f1f5f9; color: #334155; 
+        }
+        .container { 
+            max-width: 450px; margin: 0 auto; background: #f8fafc; min-height: 100vh; 
+            box-shadow: 0 4px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column;
+            padding-bottom: 80px; 
+        }
+
+        /* Header Gaya App */
+        header {
+            padding: 20px;
+            background: linear-gradient(to right, #10b981, #34d399);
+            color: white;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .back-btn { display: flex; align-items: center; gap: 15px; text-decoration: none; color: white; }
+        .header-title h1 { font-size: 18px; margin: 0; }
+        .header-title p { font-size: 11px; margin: 5px 0 0 0; opacity: 0.9; }
+
+        main { padding: 20px; }
+
+        /* Kartu Judul */
+        .card-title {
+            background: white; padding: 20px; border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02); margin-bottom: 20px;
+        }
+        .card-title h2 { font-size: 22px; margin: 0; color: #1e293b; line-height: 1.3; }
+
+        /* Kartu Pengantar */
+        .intro-box {
+            background: #fff; padding: 20px; border-radius: 20px;
+            border-left: 5px solid #10b981; margin-bottom: 25px;
+            font-style: italic; font-size: 14px; line-height: 1.6;
+            color: #065f46; box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        /* Isi Artikel & Section */
+        .article-body { line-height: 1.8; font-size: 15px; color: #475569; }
+        
+        .section-box {
+            background: white; padding: 20px; border-radius: 20px;
+            margin-bottom: 20px; border: 1px solid #f1f5f9;
+        }
+        
+        .section-num {
+            display: inline-block; background: #d1fae5; color: #065f46;
+            width: 35px; height: 35px; line-height: 35px; text-align: center;
+            border-radius: 10px; font-weight: 700; font-size: 14px; margin-bottom: 15px;
+        }
+
+        .article-body h3 { color: #1e293b; margin: 0 0 10px 0; font-size: 18px; }
+        .article-body ul { padding-left: 20px; margin-bottom: 0; }
+        .article-body li { margin-bottom: 8px; }
+
+        /* Disclaimer Box */
+        .card-dalil {
+            background: #fef2f2; border: 1px solid #fee2e2;
+            padding: 20px; border-radius: 20px; margin: 25px 0;
+        }
+        .card-dalil h4 { color: #991b1b; margin: 0 0 10px 0; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+        .card-dalil p { color: #b91c1c; font-size: 14px; line-height: 1.6; margin: 0; }
+
+        /* Tag Footer */
+        .tag-box { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0; }
+        .tag { background: #fff; border: 1px solid #e2e8f0; padding: 6px 12px; border-radius: 10px; font-size: 11px; color: #64748b; text-decoration: none; }
+
+        /* Footer Navigasi Permanen - Hijau Seragam */
+        .bottom-nav {
+            position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 100%; max-width: 450px; 
+            background: #10b981; 
+            display: flex; justify-content: space-around; padding: 12px 0;
+            border-top: 1px solid rgba(255,255,255,0.1); 
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .nav-item { text-align: center; text-decoration: none; color: rgba(255,255,255,0.6); font-size: 10px; font-weight: 600; }
+        .nav-item.active { color: #ffffff; }
+        .nav-item svg { display: block; margin: 0 auto 5px auto; width: 22px; height: 22px; }
     </style>
 </head>
-<body class="bg-emerald-50/50 min-h-screen">
+<body>
 
-    <div class="max-w-md mx-auto min-h-screen flex flex-col shadow-2xl bg-white relative">
-        
-        <div class="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-full -mr-16 -mt-16 z-0"></div>
-        <div class="absolute top-40 left-0 w-20 h-20 bg-emerald-50 rounded-full -ml-10 z-0"></div>
-
-        <div class="flex-none bg-gradient-to-br from-emerald-600 to-emerald-500 px-6 py-8 shadow-lg relative z-10">
-            <div class="flex items-center gap-4">
-                <a href="https://muroqu.web.id" class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-white hover:bg-white/30 transition-all">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                    </svg>
-                </a>
-                <div>
-                    <h1 class="text-xl font-bold text-white tracking-tight">Terms & Conditions</h1>
-                    <p class="text-emerald-100 text-xs opacity-90">Ketentuan Penggunaan Layanan</p>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href"https://muroqu.web.id" class="back-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+                <div class="header-title">
+                    <h1>Terms & Conditions</h1>
+                    <p>Ketentuan Layanan MurajaahQu</p>
                 </div>
-            </div>
-        </div>
+            </a>
+        </header>
 
-        <div class="flex-1 px-6 py-8 pb-20 overflow-y-auto relative z-10 custom-scrollbar">
-            <div class="prose prose-sm max-w-none">
+        <main>
+            <div class="card-title">
+                <h2>Ketentuan Penggunaan</h2>
+            </div>
+
+            <div class="intro-box">
+                "Dengan mengakses atau menggunakan aplikasi MurajaahQu, Anda dianggap telah membaca, memahami, dan menyetujui seluruh ketentuan yang tertulis di bawah ini secara sadar."
+            </div>
+
+            <div class="article-body">
                 
-                <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-2xl mb-8">
-                    <p class="text-emerald-800 text-xs leading-relaxed italic">
-                        "Dengan mengakses atau menggunakan aplikasi MurajaahQu, Anda dianggap telah membaca, memahami, dan menyetujui seluruh ketentuan yang tertulis di bawah ini secara sadar."
-                    </p>
+                <!-- Section 01 -->
+                <div class="section-box">
+                    <div class="section-num">01</div>
+                    <h3>Definisi Layanan</h3>
+                    <p style="margin:0;">MurajaahQu adalah platform digital yang menyediakan fitur interaktif untuk membantu pengguna dalam mengulang (murajaah) hafalan Al-Quran. Layanan mencakup teks ayat, audio, dan sistem kuis latihan.</p>
                 </div>
 
-                <section class="mb-8">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="px-2 py-1 bg-rose-500 text-white text-[10px] font-bold rounded-md uppercase">01</span>
-                        <h2 class="text-md font-bold text-slate-800">Definisi Layanan</h2>
-                    </div>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        MurajaahQu adalah platform digital yang menyediakan fitur interaktif untuk membantu pengguna dalam mengulang (murajaah) hafalan Al-Quran. Layanan mencakup teks ayat, audio, dan sistem kuis latihan.
-                    </p>
-                </section>
-
-                <section class="mb-8">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="px-2 py-1 bg-emerald-500 text-white text-[10px] font-bold rounded-md uppercase">02</span>
-                        <h2 class="text-md font-bold text-slate-800">Hak Kekayaan Intelektual</h2>
-                    </div>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3">
-                        Seluruh desain UI/UX, kode sumber (source code), dan algoritma latihan dalam aplikasi ini adalah milik eksklusif pengembang MurajaahQu.
-                    </p>
-                    <ul class="list-disc list-outside ml-5 text-slate-600 text-sm space-y-2">
+                <!-- Section 02 -->
+                <div class="section-box">
+                    <div class="section-num">02</div>
+                    <h3>Hak Kekayaan Intelektual</h3>
+                    <ul>
+                        <li>Seluruh desain UI/UX, kode sumber, dan algoritma latihan adalah milik eksklusif MurajaahQu.</li>
                         <li>Dilarang mendistribusikan ulang script tanpa izin tertulis.</li>
-                        <li>Dilarang menggunakan nama "MurajaahQu" untuk kepentingan komersial pihak ketiga.</li>
+                        <li>Dilarang menggunakan nama "MurajaahQu" untuk komersial pihak ketiga.</li>
                     </ul>
-                </section>
+                </div>
 
-                <section class="mb-8">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="px-2 py-1 bg-emerald-500 text-white text-[10px] font-bold rounded-md uppercase">03</span>
-                        <h2 class="text-md font-bold text-slate-800">Batasan Penggunaan</h2>
-                    </div>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Pengguna setuju untuk tidak:
-                    </p>
-                    <ol class="list-decimal list-outside ml-5 text-slate-600 text-sm space-y-2 mt-2">
-                        <li>Melakukan manipulasi data pada sistem skor atau progres hafalan.</li>
-                        <li>Melakukan tindakan yang dapat membebani server atau API pihak ketiga secara tidak wajar.</li>
-                        <li>Menggunakan aplikasi ini untuk tujuan yang melanggar norma hukum atau agama.</li>
-                    </ol>
-                </section>
+                <!-- Section 03 -->
+                <div class="section-box">
+                    <div class="section-num">03</div>
+                    <h3>Batasan Penggunaan</h3>
+                    <ul>
+                        <li>Tidak melakukan manipulasi data skor atau progres.</li>
+                        <li>Tidak membebani server atau API secara tidak wajar.</li>
+                        <li>Tidak menggunakan aplikasi untuk tujuan melanggar hukum/agama.</li>
+                    </ul>
+                </div>
 
-                <section class="mb-8 border-l-2 border-rose-400 pl-4 bg-rose-50/30 py-2">
-                    <h2 class="text-md font-bold text-slate-800 mb-2">4. Disclaimer Khusus Al-Quran</h2>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Mengingat kesucian teks Al-Quran, kami berupaya semaksimal mungkin menjaga akurasi teks. Namun, aplikasi ini hanyalah <strong>alat bantu</strong>. Jika ditemukan perbedaan antara teks digital dan Mushaf cetak resmi, maka Mushaf cetaklah yang menjadi rujukan utama. Kami sangat menyarankan proses murajaah tetap didampingi oleh seorang pengajar (Talaqqi).
-                    </p>
-                </section>
+                <!-- Disclaimer Khusus -->
+                <div class="card-dalil">
+                    <h4>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        04. Disclaimer Al-Quran
+                    </h4>
+                    <p>Aplikasi ini hanyalah alat bantu. Jika ditemukan perbedaan teks digital dengan Mushaf cetak resmi, maka Mushaf cetak menjadi rujukan utama. Sangat disarankan murajaah tetap didampingi pengajar (Talaqqi).</p>
+                </div>
 
-                <section class="mb-8">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="px-2 py-1 bg-emerald-500 text-white text-[10px] font-bold rounded-md uppercase">05</span>
-                        <h2 class="text-md font-bold text-slate-800">Perubahan Ketentuan</h2>
-                    </div>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Pengembang berhak mengubah syarat dan ketentuan ini sewaktu-waktu tanpa pemberitahuan sebelumnya. Penggunaan berkelanjutan atas aplikasi ini setelah perubahan tersebut dianggap sebagai persetujuan Anda.
-                    </p>
-                </section>
+                <!-- Section 05 -->
+                <div class="section-box">
+                    <div class="section-num">05</div>
+                    <h3>Perubahan Ketentuan</h3>
+                    <p style="margin:0;">Pengembang berhak mengubah syarat ini sewaktu-waktu. Penggunaan berkelanjutan dianggap sebagai persetujuan Anda.</p>
+                </div>
 
             </div>
-        </div>
 
-        <div class="flex-none p-6 text-center border-t border-slate-100 bg-white">
-            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">
-                Update: 8 Mei 2026 &bull; MurajaahQu
-            </p>
-        </div>
+            <div class="tag-box">
+                <a href="#" class="tag">#terms</a>
+                <a href="#" class="tag">#conditions</a>
+                <a href="#" class="tag">#legal</a>
+                <a href="#" class="tag">#8Mei2026</a>
+            </div>
+        </main>
+
+        <!-- Footer Navigasi Hijau & Putih -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                Surat
+            </a>
+            <a href="#" class="nav-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Sholat
+            </a>
+            <a href="#" class="nav-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                Amalan
+            </a>
+            <a href="#" class="nav-item">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Info
+            </a>
+        </nav>
     </div>
 
 </body>
-          </html>
-  
+</html>
