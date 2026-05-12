@@ -27,8 +27,12 @@
         .back-btn { display: flex; align-items: center; gap: 15px; text-decoration: none; color: white; }
         .header-title h1 { font-size: 18px; margin: 0; }
         .header-title p { font-size: 11px; margin: 5px 0 0 0; opacity: 0.9; }
-
         main { padding: 20px; }
+        /* Gambar Artikel */
+        .featured-image {
+            width: 100%; aspect-ratio: 16/9; background: #e2e8f0; border-radius: 20px;
+            margin-bottom: 20px; object-fit: cover; border: 1px solid #e2e8f0;
+        }
 
         /* Judul Halaman */
         .card-title {
@@ -97,8 +101,8 @@
                 </div>
             </a>
         </header>
-
         <main>
+            <img src="/images-artikel/faq.png" alt="FAQ" class="featured-image" loading="lazy">
             <div class="card-title">
                 <h2>Pertanyaan Umum</h2>
             </div>
@@ -140,7 +144,7 @@
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 Sholat
             </a>
-            <a href="https://muroqu.web.id/dzikir-doa" class="nav-item active">
+            <a href="https://muroqu.web.id/dzikir-doa" class="nav-item">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
                 Amalan
             </a>
