@@ -82,7 +82,7 @@
     body { font-family: var(--sans); background: var(--cream); color: var(--subink); line-height: 1.8; font-size: 1rem; }
 
     /* ── Header situs (otomatis) ── */
-    body > header { background: var(--em); padding: 0.65rem 1.5rem; text-align: center; }
+    body > header { background: var(--em); padding: 0.65rem 1.5rem; text-align: center; margin-bottom: 0; }
     body > header span { font-family: var(--serif); font-size: 0.85rem; color: rgba(255,255,255,0.75); letter-spacing: 0.06em; text-transform: uppercase; }
 
     /* ── H1 & p.lead: Full Width, Ramping, H1 Besar & p.lead Kecil ── */
@@ -125,7 +125,7 @@
     }
 
     /* ── Wrapper konten ── */
-    main { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    main { max-width: 720px; margin: 0 auto; padding: 0rem 1.5rem 4rem; }
 
     /* ── TOC (dibuat otomatis oleh JS) ── */
     #toc { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--em); border-radius: 0.5rem; margin-bottom: 2.5rem; overflow: hidden; }
@@ -139,7 +139,14 @@
 
     /* ── Gambar ── */
     main img { width: 100%; border-radius: 0.65rem; margin: 1rem 0 1.5rem; border: 1px solid var(--border); display: block; }
-
+ .image-description {
+      text-align: center; /* Teks rata tengah */
+      font-size: 0.9rem;  /* Ukuran sedikit lebih kecil */
+      color: var(--muted); /* Warna abu-abu yang lebih lembut */
+      margin-top: -1rem;    /* Jarak sedikit naik ke gambar */
+      margin-bottom: 1.5rem; /* Jarak ke paragraf di bawahnya */
+      font-style: italic;   /* Cetak miring (opsional) */
+                                  }
     /* ── H2 = judul section ── */
     h2 { font-family: var(--serif); font-size: 1.45rem; color: var(--ink); margin: 2.5rem 0 0.85rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold-lt); scroll-margin-top: 1rem; }
 
@@ -258,7 +265,7 @@
 <p class="lead">Ditulis oleh Tim Ma'had Sabilul Qur'an </p>
 
 <img src="https://cdn.prod.website-files.com/65af5f0812c914d3fef6a68c/661f7c99265d5b5e6939285b_17.%20Menghafal%20Quran%20Itu%20Semudah%20Tersenyum%20Jadi%20Tidak%20Sulit-p-800.jpeg" alt="Ilustrasi penghafal Al-Qur'an sedang murojaah" />
-      
+    <p class="image-description">Tampak santri sedang murojaah Alquran</p>  
       <h2>Metode Menghafal Alquran</h2>
           
         <p>Di lingkungan pondok tahfidz, pendekatan dalam melaksanakan murojaah tidaklah seragam.
